@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+
+section {
+    position: relative;
+    padding: .1rem 9%;
+    margin-bottom: 5rem;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+h2 {
+    color: #43a284;
+}
+
+.content {
+    flex: 1;
+    width: 100%;
+}
+
+.healthLink {
+    color: blue;
+    text-decoration: underline !important;
+}
+
+.header-and-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-and-image h2 {
+    direction: rtl;
+    text-align: right;
+}
+
+.about .content h2 {
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.stavitProfile {
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 20%;
+}
+
+@media (max-width:767px) {
+    .stavitProfile {
+        width: 55%;
+    }
+
+    p {
+        font-size: 20px !important;
+    }
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+.paragraph-container p {
+    font-size: 1.5rem;
+    direction: rtl;
+}
+
+.pLine {
+    line-height: 3rem;
+}
+
+.pLine>p {
+    margin-bottom: 1.5rem;
+}
+
+@-webkit-keyframes fadeLeft {
+    0% {
+        -webkit-transform: translateX(-5rem);
+        transform: translateX(-5rem);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeLeft {
+    0% {
+        -webkit-transform: translateX(-5rem);
+        transform: translateX(-5rem);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fadeUp {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}

@@ -1,0 +1,163 @@
+<!-- Background-image -->
+<div class="background-image">
+    <img src="assets/images/logo5.png">
+</div>
+<!-- End background-image -->
+
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img *ngIf="!isSmallScreen" src="assets/images/carousel-images/personal.png"
+                class="d-block xl:w-5/12 w-3/5  float-left">
+            <img *ngIf="isSmallScreen" src="assets/images/carousel-images/personal-small.png"
+                class="d-block xl:w-5/12 w-3/5  float-left">
+            <div class="header">
+                <h1 class=" xl:text-5xl text-4xl mainHeader">ידע הוא כוח כשזה מגיע לבריאות שלך</h1>
+                <h2 class="xl:text-3xl text-3xl"> כאן תוכל למצוא המלצות בריאות מותאמות</h2>
+                <h1 class="font-semibold xl:text-5xl text-4xl underline mainHeader"> אישית עבורך!</h1>
+                <a class="carouselBtn" routerLink="/data">למידע נוסף</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img *ngIf="!isSmallScreen" src="assets/images/carousel-images/articles.png"
+                class="d-block xl:w-5/12 w-3/5 float-left">
+            <img *ngIf="isSmallScreen" src="assets/images/carousel-images/articles-small.png"
+                class="d-block xl:w-5/12 w-3/5 float-left">
+            <div class="header">
+                <h1 class="xl:text-4xl text-4xl mainHeader"> בואו להינות ממאמרים מעשיים בנושא </h1>
+                <h2 class="xl:text-4xl text-4xl mainHeader">בריאות הגוף והנפש </h2>
+                <a class="carouselBtn" routerLink="/articles">למידע נוסף</a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img *ngIf="!isSmallScreen" src="assets/images/carousel-images/stavit.png"
+                class="d-block xl:w-5/12 w-3/5 float-left">
+            <img *ngIf="isSmallScreen" src="assets/images/carousel-images/stavit-small.png"
+                class="d-block xl:w-5/12 w-3/5 float-left">
+            <div class="header">
+                <h1 class="xl:text-4xl text-4xl mainHeader"> אני מאחלת לכל משתמשי האתר</h1>
+                <h2 class="xl:text-3xl text-3xl">בריאות מיטבית, איכות חיים אופטימליים, ושיהיה לכולנו </h2>
+                <h2 class="xl:text-5xl text-4xl mainHeader"> -רק בריאות-</h2>
+                <h2 class="xl:text-4xl text-4xl hidden text-left mt-20 xl:block underline"> Stavit Maimoni Full Stack
+                    Devekoper B.S.N R.N </h2>
+                <a class="carouselBtn" routerLink="/about">למידע נוסף</a>
+            </div>
+        </div>
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+    </div>
+</div>
+
+<!-- End Carousel -->
+
+<!-- Articles -->
+<div class="articles">
+    <h1 *ngIf="!isSmallScreen" class="arrow-down"></h1>
+    <h1 class="goodHeader">שווה לדעת</h1>
+    <div class="cardContainer">
+        <div class="card">
+            <img class="card-img-top" rel="" src="assets/images/screening-article.jpeg">
+            <div class="card-body">
+                <h5 class="card-title">בדיקות סקר-להקדים תרופה למכה</h5>
+                <p class="card-text"> גילוי מוקדם של מחלות במצב סמוי הוא המפתח להצלחת הטיפול. </p>
+                <a routerLink="/article-one" class="btn btn-primary">למידע נוסף</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/images/run1.jpg">
+            <div class="card-body">
+                <h5 class="card-title">היכון הכן רוץ!</h5>
+                <p class="card-text">אימון אירובי למען הבריאות שלך.</p>
+                <a routerLink="/article-two" class="btn btn-primary">למידע נוסף</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/images/cognition-article.jpg">
+            <div class="card-body">
+                <h5 class="card-title"> אימון קוגניטיבי</h5>
+                <p class="card-text">כמו הגוף,גם את המוח אסור להזניח.</p>
+                <a routerLink="/article-three" class="btn btn-primary">למידע נוסף</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/images/skin-care-article.jpg">
+            <div class="card-body">
+                <h5 class="card-title">הקרם באמת יצעיר אותי? </h5>
+                <p class="card-text">מדריך לחומרים הפעילים המשפיעים על עור הפנים.</p>
+                <a routerLink="/article-four" class="btn btn-primary">למידע נוסף</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/images/computer-article.jpeg">
+            <div class="card-body">
+                <h5 class="card-title">אתם ועמדת המחשב </h5>
+                <p class="card-text">פינת העבודה של המאה ה-21.</p>
+                <a routerLink="/article-fifth" class="btn btn-primary">למידע נוסף</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/images/eye-article.jpg">
+            <div class="card-body">
+                <h5 class="card-title">שומרים על בריאות העיניים</h5>
+                <p class="card-text">כמה צעדים פשוטים לשמירה על בריאות העיניים.</p>
+                <a routerLink="/article-sixth" class="btn btn-primary">למידע נוסף</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/images/bp-article.jpg">
+            <div class="card-body">
+                <h5 class="card-title">6 דרכים להוריד את לחץ הדם</h5>
+                <p class="card-text">
+                    תרופות, תזונה ואולי בכלל ספורט? איך ניתן להוריד את לחץ הדם?</p>
+                <a routerLink="/article-seventh" class="btn btn-primary">למידע נוסף</a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="assets/images/smell-article.jpg">
+            <div class="card-body">
+                <h5 class="card-title"> איך נפטרים מריח רע מהפה?</h5>
+                <p class="card-text">יש לנו טיפים קלים לביצוע שיעזרו לכם לטהר את
+                    האווירה</p>
+                <a routerLink="/article-eighth" class="btn btn-primary">למידע נוסף</a>
+            </div>
+        </div>
+    </div>
+    <!-- End articles -->
+
+    <!-- Contact -->
+    <div class="w3-container gap contactContainer">
+        <h1 class="contactHeader">צור קשר🌷</h1>
+        <div class="contactOverlay"></div>
+        <form (ngSubmit)="send($event)" #contactForm="ngForm">
+            <div class="w3-section">
+                <label>שם</label>
+                <input type="text" name="from_name" [(ngModel)]="contact.name" class="w3-input w3-border" minlength="2"
+                    maxlength="100" required>
+            </div>
+            <div class="w3-section">
+                <label>אימייל</label>
+                <input type="email" name="from_email" [(ngModel)]="contact.email" class="w3-input w3-border"
+                    minlength="6" maxlength="255" required>
+            </div>
+            <div class="w3-section">
+                <label>הודעה</label>
+                <input type="text" name="message" [(ngModel)]="contact.message" class="w3-input w3-border" minlength="2"
+                    maxlength="200" required>
+            </div>
+            <button type="submit" class="contactBtn">שלח</button>
+        </form>
+    </div>
+    <!-- End contact -->

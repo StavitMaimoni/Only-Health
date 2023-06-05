@@ -1,0 +1,48 @@
+.cardContainer {
+    background-color: white;
+}
+
+.heading>h3 {
+    font-weight: lighter;
+    margin-bottom: 50px;
+}
+
+.articleContent {
+    direction: rtl;
+    margin-right: 10px;
+    white-space: break-spaces;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    margin-bottom: 10rem;
+}
+
+.column-left {
+    flex: 1;
+}
+
+.column-right {
+    flex: 1;
+    text-align: center;
+}
+
+.articleImg {
+    max-width: 100%;
+    height: 95%;
+}
+
+h6,h4,h5{
+    color: #356aa0;
+}
+
+a{
+    text-decoration:underline;
+}
+.articleContent {
+    height: 140rem;
+}
+@media (max-width:768px) {
+    .articleContent {
+        height: 380rem;
+    }
+}

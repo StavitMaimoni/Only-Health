@@ -1,0 +1,33 @@
+<div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title flex">
+        <img src="assets/images/logo.png" class="w-16" alt="">
+        <img src="assets/images/logo5.png"  class="w-36">
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+  
+    <div class="nav-links">
+        <a routerLink="/home" (click)="closeNavbar()"> &nbsp;&nbsp;&nbsp;&nbsp; בית<span class="material-symbols-outlined">
+                home
+            </span></a>
+        <a routerLink="/data" (click)="closeNavbar()">&nbsp;&nbsp;&nbsp;&nbsp; ההמלצות הרפואיות שלי <span class="material-symbols-outlined">
+                clinical_notes
+            </span></a>
+        <a routerLink="/articles" (click)="closeNavbar()"> &nbsp;&nbsp;&nbsp;&nbsp; מאמרים <span class="material-symbols-outlined">
+                auto_stories
+            </span></a>
+        <a routerLink="/about" (click)="closeNavbar()"> &nbsp;&nbsp;&nbsp;&nbsp; אודות <span class="material-symbols-outlined">
+                volunteer_activism
+            </span></a>
+      </div>
+      
+  </div>
+  

@@ -1,0 +1,125 @@
+<form #dataForm="ngForm">
+    <div class="flex align-middle justify-center">
+        <img src="assets/images/logo.png" class="logoImg" alt="">
+        <p class="mainHeader">
+            טבלה זו מספקת המלצות בריאות מותאמות אישית עבורך
+        </p>
+    </div>
+    <div class="container pt-4 pb-4">
+        <table class="table  table-hover">
+            <thead>
+                <tr>
+                    <th>קטגוריה</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-success">
+                    <td>גיל</td>
+                    <td>
+                        <span class="formErr" *ngIf="ageBox.errors?.['min'] && ageBox.touched">גיל לא יכול להיות מספר
+                            שלילי</span><br *ngIf="ageBox.errors?.['min'] && ageBox.touched">
+                        <span class="formErr" *ngIf="ageBox.errors?.['max'] && ageBox.touched">על הגיל להיות בין
+                            0-130</span><br *ngIf="ageBox.errors?.['min'] && ageBox.touched">
+                        <input type="number" class="form-control" name="age" [(ngModel)]="dataTable.age" min=0 max=130
+                            #ageBox="ngModel" required placeholder="רשום את גילך ">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>מין</th>
+                    <td>
+                        <label>אישה</label><br>
+                        <input type="radio" class="gold" name="gender" value="female" [(ngModel)]="dataTable.sex">
+                    </td>
+                    <td>
+                        <label>גבר</label><br>
+                        <input type="radio" class="purple" name="gender" value="male" [(ngModel)]="dataTable.sex">
+                        <span></span>
+                    </td>
+                </tr>
+                <tr class="table-success">
+                    <th>עישון</th>
+                    <td>
+                        <label>לא מעשן</label><br>
+                        <input type="radio" id=0 class="gold" name="noSmoke" value="0" [(ngModel)]="dataTable.smoke">
+                        <span></span>
+                    </td>
+                    <td>
+                        <label>מעשן</label><br>
+                        <input type="radio" class="purple" id=1 name="yesSmoke" value="1" [(ngModel)]="dataTable.smoke">
+                        <span></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>פעילות מינית</th>
+                    <td>
+                        <label>לא פעיל מינית</label><br>
+                        <input type="radio" class="gold" id=0 name="noSexuallyActive" value="0"
+                            [(ngModel)]="dataTable.sexuallyActive">
+                    </td>
+                    <td>
+                        <label>פעיל מינית</label><br>
+                        <input type="radio" class="purple" id=1 name="yesSexuallyActive" value="1"
+                            [(ngModel)]="dataTable.sexuallyActive">
+                    </td>
+                </tr>
+                <tr class="table-success">
+                    <th>הריון</th>
+                    <td>
+                        <label *ngIf="dataTable.sex !== 'male'">לא בהריון</label><br>
+                        <input *ngIf="dataTable.sex !== 'male'" type="radio" class="gold" id=0 name="noPregnant" value="0"
+                            [(ngModel)]="dataTable.pregnant">
+                    </td>
+                    <td>
+                        <label *ngIf="dataTable.sex !== 'male'">בהריון</label><br>
+                        <input *ngIf="dataTable.sex !== 'male'" type="radio" class="purple" id=1 name="yesPregnant" value="1"
+                            [(ngModel)]="dataTable.pregnant">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="buttons">
+        <div *ngIf="isSmallScreen">
+            <button (click)="send('send')" class="w3-padding-large">שלח</button>
+            <button (click)="send('clear')" class="w3-padding-large mr-14">נקה</button>
+        </div>
+        <div *ngIf="!isSmallScreen">
+            <button (click)="send('clear')" class="w3-padding-large">נקה</button>
+            <button (click)="send('send')" class="w3-padding-large ml-14">שלח</button>
+        </div>
+    </div>
+</form>
+
+<div class="loader" *ngIf="loading"></div>
+
+<!-- <div id="google_translate_element"></div> -->
+
+<div [ngClass]="{'wrapper': !isSmallScreen}">
+    <div [ngClass]="{'container': !isSmallScreen}">
+        <div class="left-section">
+            <img src="assets/images/doc-point.png" alt="">
+        </div>
+        <div class="right-section">
+            <ng-container *ngIf="!clean">
+                <h1>{{apiResponse.myHFHeading}}</h1>
+            </ng-container>
+            <div class="myHF">
+                <div class="myHF-container">
+                    <ng-container *ngFor="let m of apiResponse.myHFTitle; let i = index">
+                        <div class="myHF-row">
+                            <img class="myHF-image" src="{{apiResponse.imageUrl[i]}}" alt="image">
+                            <div class="myHF-content">
+                                <h2 class="myHF-title">{{i+1}} {{m}}</h2>
+                                <p class="myHF-description">{{apiResponse.myHFDescription[i]}}
+                                    <br> <a class="myHF-accessible" href={{apiResponse.accessibleVersion[i]}}> More
+                                        Information
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
