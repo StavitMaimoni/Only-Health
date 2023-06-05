@@ -16,6 +16,9 @@
     .background-image>img {
         display: none;
     }
+    .d-block {
+        height: 30vh;
+    }
 }
 
 /* <!--End background-image --> */
@@ -64,6 +67,9 @@
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         display: none;
+    }
+    .header {
+        width: 47%;
     }
 }
 
@@ -153,9 +159,6 @@
     height: 40rem;
 }
 @media (max-width:1500px) {
-    #demo.carousel.slide {
-        height: 30rem;
-    }
     .carouselBtn {
         width: 50%;
         position: absolute;
@@ -164,7 +167,7 @@
         font-size: 2rem;
     }
     #demo.carousel.slide {
-        height: 27rem;
+        height: 30rem;
     }
 }
 
