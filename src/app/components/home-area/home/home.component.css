@@ -16,9 +16,6 @@
     .background-image>img {
         display: none;
     }
-    .d-block {
-        height: 30vh;
-    }
 }
 
 /* <!--End background-image --> */
@@ -169,6 +166,7 @@
     #demo.carousel.slide {
         height: 30rem;
     }
+    
 }
 
 @media (max-width:767px) {
